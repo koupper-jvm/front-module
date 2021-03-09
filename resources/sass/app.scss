@@ -1,0 +1,96 @@
+@import '~bootstrap/scss/bootstrap';
+@import "variables";
+@import "mixins";
+
+.text-color {
+  @include text-colors;
+}
+
+.text-size {
+  @include text-size;
+}
+
+.text-hover {
+  @include text-hover-colors;
+}
+
+.bg {
+  @include background-colors;
+}
+
+.bg-hover {
+  @include bg-hover-colors;
+}
+
+.bg-focus {
+  @include bg-focus-colors;
+}
+
+.border-color {
+  @include border-colors;
+}
+
+.border-hover-color {
+  @include border-hover-colors;
+}
+
+.border-dotted-l {
+  @include border-dotted-l;
+}
+
+.border-solid-xl {
+  @include border-solid-xl;
+}
+
+.border-solid-l {
+  @include border-solid-l;
+}
+
+.border-solid-md {
+  @include border-solid-md;
+}
+
+.border-solid-sm {
+  @include border-solid-sm;
+}
+
+.border-radius {
+  @include radius;
+}
+
+.border-radius-side {
+  @include border-radius-side;
+}
+
+.border-solid-l-side {
+  @include border-solid-l-sides;
+}
+
+.fill {
+  @include fillings;
+}
+
+.underline
+{
+  @include underline-colors;
+}
+
+.width {
+  @include width-sizes;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer-hover {
+  @include pointer-colors;
+}
+
+.bottom-left-shadow-md {
+  @include bottom-left-shadow-md;
+}
+
+.bottom-left-shadow-md-hover {
+  @include bottom-left-shadow-md-hover;
+}

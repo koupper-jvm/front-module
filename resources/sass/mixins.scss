@@ -1,0 +1,295 @@
+@mixin background-colors {
+  @each $class-name, $hex in $colors {
+    &-#{$class-name} {
+      background-color: $hex !important;
+    }
+  }
+}
+
+@mixin width-sizes {
+  @each $class-name, $size in $sizes {
+    &-#{$class-name} {
+      width: $size !important;
+    }
+  }
+}
+
+@mixin height-sizes {
+  @each $class-name, $size in $sizes {
+    &-#{$class-name} {
+      height: $size !important;
+    }
+  }
+}
+
+@mixin border-colors {
+  @each $class-name, $color in $colors {
+    &-#{$class-name} {
+      border-color: $color !important;
+    }
+  }
+}
+
+@mixin text-colors {
+  @each $class-name, $color in $colors {
+    &-#{$class-name} {
+      color: $color !important;
+    }
+  }
+}
+
+@mixin text-size {
+  @each $key, $value in $sizes {
+    &-#{$key} {
+      font-size: $value !important;
+    }
+  }
+}
+
+@mixin bottom {
+  @each $key, $size in $sizes {
+    &-#{$key} {
+      bottom: $size;
+    }
+  }
+}
+
+@mixin left {
+  @each $key, $size in $sizes {
+    &-#{$key} {
+      left: $size;
+    }
+  }
+}
+
+@mixin right {
+  @each $key, $size in $sizes {
+    &-#{$key} {
+      right: $size;
+    }
+  }
+}
+
+@mixin top {
+  @each $key, $size in $sizes {
+    &-#{$key} {
+      top: $size;
+    }
+  }
+}
+
+@mixin shadows {
+  @each $key, $shadow in $shadows {
+    &-#{$key} {
+      box-shadow: $shadow;
+    }
+  }
+}
+
+@mixin radius {
+  @each $key, $size in $sizes {
+    &-#{$key} {
+      border-radius: $size !important;
+    }
+  }
+}
+
+@mixin border-hover-colors {
+  @each $class-name, $hex in $hover-colors {
+    &-#{$class-name} {
+      color: map-get($no-hover-colors, "#{$class-name}-no-hover") !important;
+      cursor: pointer;
+
+      &:hover {
+        color: $hex !important;
+      }
+    }
+  }
+}
+
+@mixin border-solid-xl {
+  @each $class-name, $hex in $colors {
+    &-#{$class-name} {
+      border: 3.5px solid $hex !important;
+    }
+  }
+}
+
+@mixin border-solid-l {
+  @each $class-name, $hex in $colors {
+    &-#{$class-name} {
+      border: 3px solid $hex !important;
+    }
+  }
+}
+
+@mixin border-solid-md {
+  @each $class-name, $hex in $colors {
+    &-#{$class-name} {
+      border: 1.5px solid $hex !important;
+    }
+  }
+}
+
+@mixin border-solid-sm {
+  @each $class-name, $hex in $colors {
+    &-#{$class-name} {
+      border: 1px solid $hex !important;
+
+      &:hover {
+        border: 3px solid $hex;
+      }
+    }
+  }
+}
+
+@mixin font-weight {
+  @each $name, $font-weight in $font-weight {
+    &-#{$name} {
+      &:hover {
+        font-weight: $font-weight !important;
+      }
+    }
+  }
+}
+
+@mixin border-solid-l-sides {
+  @each $side in $border-sides {
+    @each $color-name, $hex in $colors {
+      &-#{$side}-#{$color-name} {
+        border-#{$side}: 3px solid $hex !important;
+      }
+    }
+
+  }
+}
+
+@mixin border-radius-side {
+  @each $side in $border-radius-sides {
+    @each $name, $size in $sizes {
+      &-#{$side}-#{$name} {
+        border-#{$side}-radius: $size !important;
+      }
+    }
+
+  }
+}
+
+@mixin fillers {
+  @each $color-name, $hex in $colors {
+    &-#{$color-name} {
+      fill: $hex !important;
+    }
+  }
+}
+
+@mixin border-dotted-l {
+  @each $class-name, $hex in $colors {
+    &-#{$class-name} {
+      border-color: $hex;
+      border-width: 3px;
+      border-style: dotted !important;
+    }
+  }
+}
+
+@mixin bg-hover-colors {
+  @each $class-name, $hex in $hover-colors {
+    &-#{$class-name} {
+      background-color: map-get($no-hover-colors, "#{$class-name}-no-hover") !important;
+      cursor: pointer;
+
+      &:hover {
+        text-shadow: none;
+        background-color: $hex !important;
+      }
+    }
+  }
+}
+
+@mixin bg-focus-colors {
+  @each $colorName, $hex in $colors {
+    &-#{$colorName} {
+      &:focus {
+        text-shadow: none;
+        background-color: $hex !important;
+      }
+    }
+  }
+}
+
+@mixin text-hover-colors {
+  @each $class-name, $hex in $hover-colors {
+    &-#{$class-name} {
+      color: map-get($no-hover-colors, "#{$class-name}-no-hover") !important;
+      cursor: pointer;
+
+      &:hover {
+        text-shadow: none;
+        color: $hex !important;
+      }
+    }
+  }
+}
+
+@mixin underline-colors {
+  @each $color-name, $hex in $colors {
+    &-#{$color-name} {
+      text-decoration: none;
+      border-bottom: 1px solid $hex !important;
+      box-shadow: 0 -6px 0 $hex inset !important;
+    }
+  }
+}
+
+@mixin fillings {
+  @each $color-name, $hex in $colors {
+    &-#{$color-name} {
+      fill: $hex !important;
+    }
+  }
+}
+
+@mixin pointer-colors {
+  @each $class-name, $hex in $hover-colors {
+    &-#{$class-name} {
+      color: map-get($no-hover-colors, "#{$class-name}-no-hover") !important;
+      cursor: pointer !important;
+
+      &:hover {
+        & span {
+          color: $hex !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin bottom-left-shadow-md {
+  @each $color-name, $hex in $colors {
+    &-#{$color-name} {
+      box-shadow: 10px 10px 0 $hex;
+      -moz-box-shadow: 10px 10px 0 $hex;
+      -webkit-box-shadow: 10px 10px 0 $hex;
+      -o-box-shadow: 10px 10px 0 $hex;
+    }
+  }
+}
+
+@mixin bottom-left-shadow-md-hover {
+  @each $color-name, $hex in $colors {
+    &-#{$color-name} {
+      &:hover {
+        box-shadow: 10px 10px 0 $hex;
+        -moz-box-shadow: 10px 10px 0 $hex;
+        -webkit-box-shadow: 10px 10px 0 $hex;
+        -o-box-shadow: 10px 10px 0 $hex;
+      }
+    }
+  }
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgba(107,114,128,var(--tw-text-opacity));
+}

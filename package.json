@@ -1,0 +1,26 @@
+{
+  "name": "front-module",
+  "version": "",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/@koupper/front-manager/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/@koupper/front-manager/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "serve": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js serve --port 8082 --inline --hot --config=node_modules/@koupper/front-manager/webpack.config.js"
+  },
+  "author": "",
+  "devDependencies": {
+    "@koupper/front-manager": "2.6.0",
+    "cross-env": "^7.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "nodemon": "^2.0.7",
+    "popper.js": "^1.16.1",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.9"
+  }
+}
